@@ -1,5 +1,5 @@
 
-# RAMbow - 1Mbit memory expansion for Rainbow 100
+# RAMbow - 1Mbyte memory expansion for Rainbow 100
 "RAMbow flexes memory muscle" was the headline of a hardware review in the Silicon Valley Rainbow bulletin in October 1987.<br>
 The article, which you can read in full [here](https://github.com/na103/rambow/blob/main/docs/RAMbow.pdf), discusses a memory expansion designed by Jerry Miller and marketed by Suitable Solution.<br>
 This expansion could extend the memory of the first version of the Rainbow 100 (revision A) beyond its design limit of 256KB.<br><br>
