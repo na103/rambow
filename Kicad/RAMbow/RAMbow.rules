@@ -1,0 +1,123 @@
+
+(rules PCB RAMbow
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1998)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 4.4)
+    )
+    (layer_rule In1.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 4.4)
+    )
+    (layer_rule In2.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 4.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.3)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clearance 200.2)
+    (clearance 125.0 (type smd_to_turn_gap))
+    (clearance 50.0 (type smd))
+    (clearance 200.2 (type "kicad_default"))
+  )
+  (padstack "Via[0-3]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_800:400_um" "Via[0-3]_800:400_um" default
+  )
+  (via 
+    "Via[0-3]_800:400_um-kicad_default" "Via[0-3]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-3]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    +5V GND CAS1 DRAMD7 DRAMA6 DRAMA3 DRAMA4 DRAMA5
+    DRAMA7 DRAMA1 DRAMA2 DRAMA0 RAS1 WR1 "Net-(E10-Pad1)" DRAMD4
+    AMUX A16 A17 A19 A18 "Net-(E7-Pad10)" "Net-(E7-Pad11)" "Net-(E7-Pad13)"
+    "Net-(E15-Pad9)" CASTime "Net-(E8-Pad11)" WR "Net-(E8-Pad8)" DRAMD6 DRAMD3 PUI
+    RfshRAS "Net-(E14-Pad3)" RASTime "Net-(E14-Pad11)" "Net-(E15-Pad11)" "_RST" RD DRAMD5
+    DRAMD2 DRAMP "_BuffEn" ClkParity /MUXA6 A8 A3 A1
+    A10 /MUXA1 /MUXA2 A7 A2 A0 A9 /MUXA0
+    /MUXA4 A11 A5 A4 A12 /MUXA3 /MUXA5 A14
+    A6 A15 A13 /MUXA7 DRAMD1 DRAMD0 RfshInc /Rfsh7
+    /Rfsh6 /Rfsh0 /Rfsh5 /Rfsh1 /Rfsh4 /Rfsh2 /Rfsh3 "_RfshAddr"
+    D0 D1 D2 D3 D4 D5 D6 D7
+    "_DT_R" ParityCtrl "_NMI" ParityOut "Net-(J1-Pad29)" "Net-(E1-Pad8)" "Net-(E1-Pad2)" "Net-(E1-Pad3)"
+    "Net-(E1-Pad10)" "Net-(E1-Pad11)" "Net-(E1-Pad12)" "Net-(E1-Pad6)" "Net-(E7-Pad8)" "Net-(E7-Pad9)" "Net-(E7-Pad12)" "Net-(E11-Pad2)"
+    "Net-(E13-Pad12)" "Net-(E8-Pad12)" "Net-(E10-Pad2)" "Net-(E8-Pad4)" "Net-(E8-Pad10)" "Net-(E8-Pad9)" "Net-(E10-Pad5)" "Net-(E9-Pad3)"
+    "Net-(E10-Pad13)" "Net-(E10-Pad11)" "Net-(E10-Pad9)" "Net-(E12-Pad6)" "Net-(E12-Pad11)" "Net-(E12-Pad3)" "Net-(E13-Pad9)" "Net-(E13-Pad6)"
+    /Rfsh8 "Net-(E14-Pad13)" "Net-(E14-Pad5)" "Net-(E14-Pad15)" "Net-(E14-Pad7)" "Net-(E14-Pad17)" "Net-(E14-Pad9)" "Net-(E15-Pad10)"
+    "Net-(E15-Pad12)" "Net-(E15-Pad13)" "Net-(E15-Pad14)" "Net-(E16-Pad4)" DRAMA8 DRAMA9 "Net-(E17-Pad4)" "Net-(E18-Pad4)"
+    "Net-(E19-Pad4)" "Net-(E20-Pad4)" "Net-(E21-Pad4)" "Net-(E22-Pad4)" "Net-(E23-Pad4)" "Net-(E24-Pad4)" "Net-(E1-Pad4)" "Net-(E12-Pad10)"
+    "Net-(E5-Pad17)" "Net-(E5-Pad7)" "Net-(E5-Pad15)" "Net-(E5-Pad5)" "Net-(E5-Pad13)" "Net-(E5-Pad3)" /MUXA8 /MUXA9
+    "Net-(E25-Pad2)" "Net-(E25-Pad8)" "Net-(E25-Pad9)" "Net-(E25-Pad10)" "Net-(E25-Pad4)" "Net-(E25-Pad11)" "Net-(E25-Pad5)" "Net-(E25-Pad12)"
+    "Net-(E25-Pad6)" "Net-(E25-Pad13)" "Net-(J2-Pad22)" "Net-(E28-Pad19)" "88_RESET" "88_A14" "88_READY" "88_A13"
+    "88_~TEST~" "88_A12" "88_~INTA~" "88_A11" "88_ALE" "88_A10" "88_DEN" "88_A9"
+    "88_DT_~R~" "88_A8" "88_IO_M" "88_AD7" "88_WR" "88_AD6" "Net-(E26-Pad30)" "88_AD5"
+    "88_HOLD" "88_AD4" "88_~RD~" "88_AD3" "88_MN_~MX~" "88_AD2" "88_~SSO~" "88_AD1"
+    "88_A19" "88_AD0" "88_A18" "88_NMI" "88_A17" "88_INTR" "88_A16" "88_CLK"
+    "88_A15" "Net-(E27-Pad12)" "Net-(E27-Pad13)" "Net-(E27-Pad14)" "Net-(E27-Pad15)" "Net-(E27-Pad16)" "Net-(E27-Pad17)" "Net-(E27-Pad18)"
+    "Net-(E27-Pad19)" "Net-(E28-Pad9)" "Net-(E28-Pad18)" "Net-(E28-Pad8)" "Net-(E28-Pad17)" "Net-(E28-Pad7)" "Net-(E28-Pad16)" "Net-(E28-Pad6)"
+    "Net-(E28-Pad15)" "Net-(E28-Pad14)" "Net-(E28-Pad13)" "Net-(E28-Pad12)" "Net-(E28-Pad11)" "Net-(J1-Pad30)" "Net-(J1-Pad32)" "Net-(J1-Pad43)"
+    "Net-(J1-Pad47)" "Net-(J1-Pad49)" "Net-(RN2-Pad8)" "Net-(RN2-Pad6)" "Net-(RN2-Pad5)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

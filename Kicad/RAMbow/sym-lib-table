@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name RAMbow-rescue)(type Legacy)(uri "${KIPRJMOD}/RAMbow-rescue.lib")(options "")(descr ""))
+)
