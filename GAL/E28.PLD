@@ -1,0 +1,31 @@
+Name     RAMbow ;
+PartNo   00 ;
+Date     29/04/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Nicola Avanzi ;
+Assembly None ;
+Location  ;
+Device   g16v8a;
+
+/* *************** INPUT PINS *********************/
+PIN  1   =   A16                      ; /*    8088 A16                     */ 
+PIN  2   =   A17                      ; /*    8088 A17                     */ 
+PIN  3   =   A18                      ; /*    8088 A18                     */ 
+PIN  4   =   A19                      ; /*    8088 A19                     */ 
+PIN  5   =   IO_M                     ; /*    8088 IO/M                    */ 
+PIN  6   =   A_B                      ; /*    Jumper sel (low RAINBOW 100 A*/ 
+
+/* *************** OUTPUT PINS *********************/
+PIN  19  = BSEL                        ; /*    memory bank sel              */
+
+!BSEL = !IO_M & !A19 & A18
+      # !IO_M & !A18 & A17
+      # !IO_M & A19 & !A17
+      # !A_B & !IO_M & !A17 & A16;
+
+
+
+
+
+
