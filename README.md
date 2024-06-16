@@ -66,7 +66,7 @@ the length of the cable must be 85mm and you must separate the individual wires 
 the operation requires a little attention to avoid cutting the copper insulation.<br>
 even closing the socket with pressure requires a fair amount of force, help yourself with some tool<br>
 
-![alt text](https://github.com/na103/rambow/blob/main/img/cpu_idc_skt.jpg "CPU Socket relocator")
+![alt text](https://github.com/na103/rambow/blob/main/img/cpu_idc_skt_1.jpg "CPU Socket relocator")
 <br>
 
 ## Compatibility and issues
